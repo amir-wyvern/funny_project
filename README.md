@@ -1,30 +1,26 @@
-# Funny Project.
+# ___Funny Project.___
 
-create .env file 
 
-```
-BOT_TOKEN=xxx
-```
 
-## Build Image
-* first build the Repo
+## _Build Image_
+* _first build the Repo_
 
 ``` bash
 docker build -t funny_project .
 ```
 
-* Then create .env file:
+* _Then create .env file:_
 
 ```
 touch .env
 ```
 
-* And need to set the __BOT_TOKEN__ env in .env file:
+* _And need to set the __BOT_TOKEN__ env in .env file:_
 
 ```
 BOT_TOKEN=xxx
 ```
-## Run Image
+## _Run Image_
 ```
 docker run --env-file .env funny_project
 ```
