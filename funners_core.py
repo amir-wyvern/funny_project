@@ -31,15 +31,17 @@ def get_new_fun_pos(funners, io_data):
 
             m_str = tmp_date.strftime('%m') 
             d_str = tmp_date.strftime('%d')
-            if m_str == '12':
-                cx = f'{7*len((m_str,d_str)*10)}{3*len((d_str,))}'
             
-            else:
-                cx = f'{7*len((m_str,d_str)*10)}{4*len((d_str,))}'
+            if m_str == '01':
+                x= '1404'
+            else: 
+                x='1403'
 
-            date_obj = jdatetime.datetime.strptime(cx + f'-{m_str}-{d_str}', '%Y-%m-%d')
+            date_obj = jdatetime.datetime.strptime(f'{x}-{m_str}-{d_str}', '%Y-%m-%d')
+
             gregorian_date = date_obj.togregorian()
 
+            print(break_point_day, gregorian_date , f'{x}-{m_str}-{d_str}', break_point_day < gregorian_date)
             if break_point_day < gregorian_date  :
                 
                 if str(value) != 'nan' and str(value) in funners:
